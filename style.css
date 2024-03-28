@@ -1,0 +1,356 @@
+*{
+  padding: 5px;
+  
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+/* 12 grild*/
+.layout{
+  border: 2px solid black;
+  display: grid;
+  grid:
+  "span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12" 1fr
+  "span6 span6 span6 span6 span6 span6 . . . . . ." 1fr
+ ". . . . span3 span3 span3 . . . . . " 1fr
+ ". . . . span1 . . . . . . . " 1fr
+  / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap:5px;
+  }
+.span12{grid-area:span12; background-color: #bbb;}
+.span6{grid-area:span6; background-color: #bbb;}
+.span3{grid-area:span3; background-color: #bbb;}
+.span1{grid-area:span1; background-color: #bbb;}
+
+/* 3x3 */
+.layout2{
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-rows:repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.x3{
+  background-color: lavender;
+  border: 2px solid lightblue;
+}
+
+
+
+/* holy Grail*/
+.layout3{
+  border: 2px soild black;
+  width: 90%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header header header header" auto
+  "leftSide body rightSide" 1fr"
+  "footer footer footer" auto
+  / auto 1fr auto;
+  gap: 5px;
+  
+}
+.header{grid-area: header; background-color: #f9bec8;}
+.leftSide{grid-area: leftSide; background-color: #ea536c;}
+rightSide{grid-area: rightSide; background-color: #b03088;}
+.body{grid-area: body; background-color: #53cbea;}
+.footer{grid-area: footer; background-color: #944250;}
+
+/*Sidebar#*/
+.layout4{
+border: 2px soild black;
+width: 99%;
+height: 300px;
+display: grid;
+grid:
+  "sidebar body1" 1fr
+/ auto 1fr;
+gap: 5px;
+}
+.sidebar{ grid-area: sidebar; background-color: #996ac8;}
+.body1{grid-area: body1; background-color: #bba7d3;}
+
+/* Header Main Footer */
+.layout5{
+  border: 2px sold black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header1" auto 
+  "main" 1fr
+  "footer1" auto
+  / 1fr
+  gap:5px;
+}
+.hrader1{ grid-area: hader1; background-color: green;}
+.main{grid-area: main; background-color: lightgreen;}
+.footer1{grid-area: footer1; background-color: darkgreen;}
+
+
+/*Infinite Rows*/ 
+.layout6{
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(auto-fit,1fr);
+  gap: 5px;
+}
+.box{
+  border: 1px solid darkblue;
+  background-color: lightblue;
+}
+
+
+/*Infinite Rows with Areas*/
+.layout7{
+  border: 2px solid black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(auto-fit,1fr);
+  gap: 5px;
+}
+
+.col1Last1{
+  grid-column: 1/-1;
+}
+
+/*Flexbox Row*/
+.layout8{
+  border: 2px solid red;
+  background-color: hotpink;
+  display: flex;
+  gap: 10px;
+}
+
+/*Flexbox wrap*/
+.layout9{
+  width: 100%;
+  border: 2px solid red;
+  background-color: hotpink;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/*flexbox Fill space*/
+.layout10{
+border: 2px solid #00ff7b
+background-color: #00ff7b;
+display: flex;
+gap: 10px;
+}
+.grow1{
+  flex-grow:1;
+  
+
+/*flexbox Fill remaining Space*/
+.layout11{
+border: 2px solid #ff4d00;
+background-color: #ecacac;
+display: flex;
+gap: 10px;
+}
+  /*flexbox Seprate*/
+  .layout12{
+  border: 2px solid #ff00dd;
+  background-color: #ecacac;
+  display: flex;
+  gap: 10px;
+  }
+  
+  
+.marginLeft{
+  margin-left: auto;
+}
+/*ANIMATTIONS*/
+/* 2 D animation X and Y axis*/
+#twoD{
+  border: 3px dashed #00ff7b;
+  background-color:lightpink ;
+}
+/*Translate Method*/
+.trans:hover{
+  transform: translate(50px,100px);
+}
+/*Translate X Methhod*/
+.transX:hover{
+  transform: translateX(50px);
+}
+/*Translate Y Methhod*/
+.transY:hover{
+  transform: translateY(100px);
+}
+/*Rotate Method */
+#rotate:hover{
+  transform: rotate(180deg);
+}
+/*Rotate X method */
+#rotateX:hover{
+  transform: rotateX(180deg);
+}
+/*Rotate Y Method */
+#rotateY:hover{
+  transform: rotateY(180deg);
+}
+/*scale Method */
+#scale:hover{
+  transform: scale(2,3);
+}
+/* Scale X Method*/
+#scaleX:hover{
+  transform: scaleX(2);
+}
+/*scale Y Method*/
+#scaleY:hover{
+  transform: scaleY(3);
+}
+/*skew Method*/
+#skew:hover{
+  transform: skew(20deg,20deg);
+}
+/*skew X Method*/
+#skewX:hover{
+  transform: skewX(20deg);
+}
+/*skew Y Method*/
+#skewY:hover{
+  transform: skewY(20deg);
+}
+/* Method Method*/
+/* matrix(scaleY, skewX, SlewY, translate*/
+#mataix:hover
+transform: matrix(1, -0.3, 0, 1, 0, 0);
+})
+
+#matrix2:hover{
+  transform: matrix(1,0,0,5,1,150,0);
+}
+
+#threeD{
+  border: 3px dotted #00ff7b;
+  background-color: lightpink;
+}
+/* 3 D animations X, Y , Z axis */
+#trans3D:hover{
+  /*translate funtion*/
+  transform: translate3d(50px,10px,150px);
+}
+/*Translate 3D Method*/
+
+
+
+/*Rotate 3D Method*/
+
+}
+/*Rotate Z Method */
+#rotateZ:hover{
+  transform: rotateY(00deg);
+}
+
+/*transition*/ 
+#transitions{
+  border: 3px soild #00ff7b;
+  
+}
+
+.box1{
+  width: 50px;
+  height: 50px;
+  background-color: #00ff7b
+  border: 1px solid #636321;
+  transition: width 2s, height 2s;
+  background-color: 2s;
+}
+
+#transitions:hover{
+  transition: 
+    width 100px, 
+    height 100px;
+  background-color: red;
+}
+
+#delay:{
+  transition:width 2s;
+  transition-delay: 1s;
+}
+delay:hover{
+  width: 100px;
+}
+
+#duration{
+  transition: backgroud-color 2s;
+  transition-duration: 4s;
+  
+}
+#duration:hover{
+  width: 100px;
+}
+#propert{
+  transition-property: width;
+}
+#propert:hover{
+  width: 100px;
+}
+#timing{
+  transition-timing-function: linear;
+}
+
+#timing:hover{
+  width: 100px;
+}
+
+
+
+#animation{
+  background-color: red;
+  border: 3px dashed #00ff7b;
+}
+
+
+
+#animate{
+  animation-name: example;
+  animation-duration: 10s;
+}
+@keyframes example{
+  from{background-color: #5d7bb6;}
+  to{background-color: yellow;}
+}
+#animate2{
+  animation-name: sample;
+  animation-duration: 10s;
+}
+@keyframes sample{
+  0%{background-color: #6277a3;}
+  25%{background-color: #254993;}
+  50%{background-color: #e8b017;}
+  75%{background-color: #8a34b2;}
+  100%{background-color: #ff66d6;}
+}
+
+#animate3{
+  position: relative;
+  animation-name: allOver;
+  animation-duration: 10s;
+  animation-iteration-count: 20;
+}
+@keyframes allOver
+0%{0%{background-color: #6277a3;}
+  25%{background-color: #254993;}
+  50%{background-color: #e8b017;}
+  75%{background-color: #8a34b2;}
+  100%{background-color: #ff66d6;}
+}
+/* perspective Method*/
+/*matrix 3D method*/
+
+
